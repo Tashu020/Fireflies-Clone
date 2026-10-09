@@ -9,7 +9,6 @@ services:
     name: fireflies-clone-api
     runtime: docker
     plan: free
-    rootDir: backend
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
     healthCheckPath: /api/v1/health
