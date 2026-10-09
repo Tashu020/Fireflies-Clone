@@ -1,0 +1,94 @@
+{
+  "title": "Engineering Sprint Planning – Sprint 24",
+  "days_ago": 0,
+  "hours_ago": 1,
+  "host": "daniel.kim@acme.example",
+  "source": "desktop",
+  "participants": ["sam.carter@acme.example", "alex.morgan@acme.example", "maria.lopez@acme.example"],
+  "transcript": [
+    "Daniel Kim: Alright, let's get started with sprint planning for sprint twenty four. The sprint runs two weeks, starting today. Before we look at tickets, let's check capacity.",
+    "Sam Carter: I'm on call the second week, so count me at about seventy percent for that week.",
+    "Maria Lopez: I'm fully available, but most of my time goes to design work. I can take small frontend tickets though.",
+    "Daniel Kim: Okay. We also have Lena out on vacation for the first three days, so overall we're at roughly eighty five percent capacity. That's around thirty four story points based on our recent velocity.",
+    "Alex Morgan: Thanks Daniel. From the product side, the sprint goal is simple. Ship release 2.4 with the redesigned dashboard and Slack alerts, and fix the CSV export issue for our large customers.",
+    "Daniel Kim: Agreed. Let's go through the board in priority order. First ticket is the CSV export streaming fix. Sam, you've already looked into this, what's your estimate?",
+    "Sam Carter: I'd say five points. The streaming change itself is small, but I want a proper load test with a two hundred thousand row export, and we need to update the API docs because the response becomes chunked.",
+    "Daniel Kim: Five points, sounds reasonable. Next, finishing Slack alert rate limiting.",
+    "Sam Carter: That one's three points. The logic is done, we just need to batch alerts that fire within the same five minute window and add tests.",
+    "Alex Morgan: Quick question on that. If ten alerts fire in five minutes, does the user get one message with a summary?",
+    "Sam Carter: Exactly, one message that lists all ten topics with counts. We'll link to the dashboard for the details.",
+    "Alex Morgan: Perfect, that's what customers asked for.",
+    "Daniel Kim: Next is moving the date range picker into the page header. Maria, this came from your beta sessions, right?",
+    "Maria Lopez: Yes. The mockup I shared this afternoon is approved, so it's just implementation. I'd call it two points, and I can pair with someone on the frontend for it.",
+    "Daniel Kim: Great, I'll pair with you on that one. Next up, the flaky end to end tests. Our CI pipeline failed eleven times last week for reasons unrelated to the code.",
+    "Sam Carter: That's been really frustrating. Most failures come from the login test timing out when the staging database is slow. I think we should mock the auth service in end to end tests and keep one real login smoke test.",
+    "Daniel Kim: I agree. Let's make it five points, it touches a lot of test files. I'll take that one myself.",
+    "Alex Morgan: Is there anything from tech debt we absolutely need this sprint?",
+    "Daniel Kim: The meetings API pagination. Right now some endpoints return every record, and one of our biggest customers has over forty thousand tickets in a single view. It's going to break eventually.",
+    "Sam Carter: That's a real risk. I'd estimate eight points, because we need to change the API, the frontend tables and the export code that depends on it.",
+    "Daniel Kim: Eight points takes us to twenty three. Let's add the onboarding video placeholder at three points and the bug fixes bucket at five points. That brings us to thirty one.",
+    "Alex Morgan: That leaves a little buffer, which I like given the release.",
+    "Daniel Kim: Exactly. Any dependencies or blockers we should flag now?",
+    "Maria Lopez: The onboarding video needs the recording review I'm doing for Alex. I should have that done by Wednesday, so it shouldn't block anything.",
+    "Sam Carter: For the pagination work, I need the decision on cursor versus offset pagination. I'd recommend cursors for the big tables, since offsets get slow and can skip rows when data changes.",
+    "Daniel Kim: Let's go with cursor pagination for large tables and keep offset for small admin lists. I'll document the decision in the engineering wiki today.",
+    "Alex Morgan: Sounds good to me. Can we also make sure QA has a test plan for 2.4 by Friday?",
+    "Daniel Kim: Yes, I'll ask the QA team to prepare it and review it with them on Friday. Okay, final check. Thirty one points committed, and the sprint goal is shipping 2.4 and fixing CSV export. Does everyone feel comfortable with the plan?",
+    "Sam Carter: Yes, it feels realistic. The buffer makes me much more comfortable about on call week.",
+    "Maria Lopez: Works for me. I'll block time for pairing with Daniel on Tuesday.",
+    "Alex Morgan: Looks great, thanks everyone. Let's have a strong sprint."
+  ],
+  "summary": {
+    "gist": "The team committed 31 story points to sprint 24 with the goal of shipping release 2.4 and fixing large CSV exports.",
+    "overview": "Daniel led planning for sprint 24. With Sam on call in the second week and a teammate on vacation, capacity is about 85%, or 34 story points. The sprint goal is shipping release 2.4 (redesigned dashboard and Slack alerts) and fixing CSV exports for large customers. The team estimated the CSV streaming fix, Slack alert rate limiting, the date picker move, flaky end-to-end tests and meetings API pagination, committing 31 points to keep a buffer. Cursor pagination was chosen for large tables.",
+    "keywords": ["Sprint planning", "Story points", "CSV export", "Rate limiting", "Flaky tests", "Cursor pagination", "Release 2.4", "Capacity"],
+    "chapters": [
+      {
+        "title": "Capacity and Sprint Goal",
+        "at": "let's check capacity",
+        "intro": "Capacity is slightly reduced, and the goal centers on release 2.4.",
+        "points": [
+          { "text": "Capacity is about eighty five percent, roughly thirty four story points, because of on call duty and a vacation", "at": "eighty five percent capacity", "children": ["Sam is at about seventy percent availability in the second week."] },
+          { "text": "The sprint goal is to ship release 2.4 and fix CSV exports for large customers", "at": "the sprint goal is simple" }
+        ]
+      },
+      {
+        "title": "Release Tickets",
+        "at": "First ticket is the CSV export streaming fix",
+        "intro": "Release work was estimated first.",
+        "points": [
+          { "text": "The CSV export streaming fix was estimated at five points, including a two hundred thousand row load test", "at": "I'd say five points", "children": ["API docs need an update because responses become chunked."] },
+          { "text": "Slack alert rate limiting is three points and batches alerts within a five minute window into one summary message", "at": "batch alerts that fire within the same five minute window" },
+          { "text": "Moving the date range picker into the header is two points, with Daniel pairing with Maria", "at": "I'd call it two points" }
+        ]
+      },
+      {
+        "title": "Quality and Tech Debt",
+        "at": "Next up, the flaky end to end tests",
+        "intro": "Reliability work was added to protect the release.",
+        "points": [
+          { "text": "CI failed eleven times last week because of flaky end to end tests, mostly login timeouts against a slow staging database", "at": "failed eleven times last week", "children": ["The fix is to mock auth in end to end tests and keep one real login smoke test."] },
+          { "text": "Meetings API pagination is an eight point risk because some endpoints return every record", "at": "The meetings API pagination", "children": ["One large customer has over forty thousand tickets in a single view."] }
+        ]
+      },
+      {
+        "title": "Commitment and Dependencies",
+        "at": "Eight points takes us to twenty three",
+        "intro": "The team committed thirty one points, leaving a buffer.",
+        "points": [
+          { "text": "Cursor pagination was chosen for large tables, with offset pagination kept for small admin lists", "at": "go with cursor pagination" },
+          { "text": "QA will prepare a 2.4 test plan for review on Friday", "at": "ask the QA team to prepare it" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Sam Carter", "text": "Implement and load test streaming CSV exports", "at": "I'd say five points" },
+      { "assignee": "Sam Carter", "text": "Finish Slack alert batching and add tests", "at": "batch alerts that fire within the same five minute window" },
+      { "assignee": "Daniel Kim", "text": "Pair with Maria to move the date range picker into the page header", "at": "I'll pair with you on that one" },
+      { "assignee": "Daniel Kim", "text": "Mock the auth service in end to end tests and keep one real login smoke test", "at": "I'll take that one myself" },
+      { "assignee": "Daniel Kim", "text": "Document the cursor pagination decision in the engineering wiki", "at": "document the decision in the engineering wiki", "completed": true },
+      { "assignee": "Daniel Kim", "text": "Review the 2.4 QA test plan with the QA team on Friday", "at": "ask the QA team to prepare it" },
+      { "assignee": "Maria Lopez", "text": "Finish the onboarding recording review by Wednesday", "at": "done by Wednesday" }
+    ]
+  }
+}

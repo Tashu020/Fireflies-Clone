@@ -1,0 +1,96 @@
+{
+  "title": "Candidate Interview – Senior Frontend Engineer",
+  "days_ago": 6,
+  "hours_ago": 2,
+  "host": "daniel.kim@acme.example",
+  "source": "notetaker",
+  "participants": ["alex.morgan@acme.example", "marcus.reed@candidate.example"],
+  "transcript": [
+    "Daniel Kim: Hi Marcus, thanks for joining us. I'm Daniel, I manage the engineering team, and this is Alex, our head of product. We'll spend about thirty minutes on your experience and some technical topics, and leave time for your questions.",
+    "Marcus Reed: Sounds great, thanks for having me.",
+    "Daniel Kim: Could you start with a quick overview of your background?",
+    "Marcus Reed: Sure. I've been a frontend engineer for about eight years. For the last four I've been at a fintech company, where I led the team that built our design system and the customer facing dashboard. Before that I worked at an agency building marketing sites and web apps for different clients.",
+    "Alex Morgan: What did the design system work involve?",
+    "Marcus Reed: We started with about forty inconsistent button styles across three products. I worked with design to define tokens for color, spacing and typography, then built a React component library on top of them. Adoption took about a year, but in the end every product used it, and we cut UI bugs roughly in half.",
+    "Daniel Kim: Impressive. Let's get technical. Our dashboards sometimes render tables with tens of thousands of rows. How would you approach performance there?",
+    "Marcus Reed: The first thing I'd do is measure, because the bottleneck isn't always where you expect. But for that many rows, I'd almost certainly virtualize the list so only the visible rows are in the DOM. I'd also make sure each row is memoized and that sorting and filtering happen on the server when the data is large.",
+    "Daniel Kim: What if the product requirement is to support selecting all rows and exporting them?",
+    "Marcus Reed: Then select all shouldn't mean loading everything in the browser. I'd represent it as a query, like all rows matching these filters, and let the backend generate the export asynchronously. The user gets a notification when the file is ready.",
+    "Alex Morgan: That's interesting, we've actually been dealing with export performance recently.",
+    "Marcus Reed: It's a very common trap. The UI looks simple but the data volume makes it a backend problem.",
+    "Daniel Kim: How do you think about state management in a large React app?",
+    "Marcus Reed: I try to keep server state and UI state separate. For server data, I like a caching library like React Query, which handles fetching, caching and invalidation. For UI state, local component state is usually enough, and I only reach for a global store when several distant components truly share it.",
+    "Daniel Kim: And testing?",
+    "Marcus Reed: Mostly integration tests with Testing Library that exercise components the way a user would. A small number of end to end tests for critical flows like login and checkout. And visual regression tests for the design system, because those catch styling bugs nobody notices in code review.",
+    "Alex Morgan: How do you approach accessibility?",
+    "Marcus Reed: I treat it as part of the definition of done. Semantic HTML first, keyboard navigation for every interactive element, and automated checks in CI. But automated tools only catch maybe a third of issues, so I also do regular manual testing with a screen reader.",
+    "Daniel Kim: Can you tell us about a hard bug you debugged recently?",
+    "Marcus Reed: We had a memory leak where the dashboard slowed down after a few hours open. It turned out a charting library was registering resize listeners on every render and never removing them. I found it with heap snapshots, comparing the number of listeners over time. The fix was a two line cleanup function, but finding it took two days.",
+    "Daniel Kim: Classic. That's a great example. Alex, anything else from your side?",
+    "Alex Morgan: Just one. How do you like to work with product and design?",
+    "Marcus Reed: Early and often. I like being involved when the problem is still being defined, because engineers can often suggest simpler solutions. And I prefer shipping small increments behind feature flags rather than big launches.",
+    "Alex Morgan: That's very much how we work here.",
+    "Daniel Kim: Marcus, what questions do you have for us?",
+    "Marcus Reed: What does the on call rotation look like for frontend engineers?",
+    "Daniel Kim: Everyone joins the rotation, about one week every two months. Frontend issues are rare, and we have good runbooks.",
+    "Marcus Reed: That's reasonable. And how is the team distributed?",
+    "Daniel Kim: We're remote first across Europe and North America, with four hours of overlap that we protect for meetings and pairing.",
+    "Marcus Reed: Great, that's what I was hoping to hear. What would success look like for this role in the first six months?",
+    "Daniel Kim: Owning the frontend for one major product area, probably the new dashboard, and improving our frontend testing practices. We'd also love help mentoring two junior engineers.",
+    "Marcus Reed: That sounds like a great fit for what I enjoy.",
+    "Daniel Kim: Thanks Marcus, this was a great conversation. Our recruiter will reach out within the week about next steps.",
+    "Marcus Reed: Thank you both, I really enjoyed it."
+  ],
+  "summary": {
+    "gist": "Marcus Reed showed strong frontend depth in design systems, performance and accessibility; the recruiter will follow up this week.",
+    "overview": "Daniel and Alex interviewed Marcus Reed for the Senior Frontend Engineer role. Marcus has eight years of frontend experience, most recently leading a design system and customer dashboard at a fintech company, which cut UI bugs roughly in half. He gave strong answers on rendering large tables (measure first, virtualize, server-side sorting, asynchronous exports), separating server and UI state, an integration-first testing strategy and treating accessibility as part of the definition of done. He described debugging a memory leak with heap snapshots. Marcus asked about on-call, team distribution and success in the role. The recruiter will follow up within the week.",
+    "keywords": ["Interview", "Senior frontend engineer", "Design system", "Virtualization", "React Query", "Testing", "Accessibility", "Memory leak"],
+    "chapters": [
+      {
+        "title": "Background",
+        "at": "quick overview of your background",
+        "intro": "Marcus brings deep design system and dashboard experience.",
+        "points": [
+          { "text": "Marcus has eight years of frontend experience, the last four leading a fintech design system and dashboard", "at": "about eight years" },
+          { "text": "His design system replaced about forty inconsistent button styles and cut UI bugs roughly in half", "at": "forty inconsistent button styles", "children": ["Adoption across three products took about a year."] }
+        ]
+      },
+      {
+        "title": "Technical Discussion",
+        "at": "Let's get technical",
+        "intro": "Marcus answered performance, architecture and quality questions in depth.",
+        "points": [
+          { "text": "For very large tables he would measure first, virtualize rows, memoize them and move sorting and filtering to the server", "at": "virtualize the list" },
+          { "text": "Select all and export should be modeled as a query, with an asynchronous backend export and a notification", "at": "represent it as a query" },
+          { "text": "He separates server state, handled by React Query, from local UI state", "at": "keep server state and UI state separate" },
+          { "text": "His testing approach favors integration tests, a few end to end tests and visual regression for the design system", "at": "Mostly integration tests" },
+          { "text": "Accessibility is part of his definition of done, combining automated checks with manual screen reader testing", "at": "part of the definition of done" }
+        ]
+      },
+      {
+        "title": "Debugging and Collaboration",
+        "at": "a hard bug you debugged",
+        "intro": "Marcus showed a methodical debugging style and a collaborative mindset.",
+        "points": [
+          { "text": "He traced a dashboard memory leak to resize listeners that were never removed, using heap snapshots", "at": "We had a memory leak", "children": ["The fix was a two line cleanup that took two days to find."] },
+          { "text": "He prefers early involvement with product and design and shipping small increments behind feature flags", "at": "Early and often" }
+        ]
+      },
+      {
+        "title": "Candidate Questions",
+        "at": "what questions do you have for us",
+        "intro": "Marcus asked about on call, team setup and expectations.",
+        "points": [
+          { "text": "On call is about one week every two months for every engineer, supported by good runbooks", "at": "one week every two months" },
+          { "text": "The team is remote first across Europe and North America with four protected hours of overlap", "at": "remote first across Europe" },
+          { "text": "Success in six months means owning a major product area, improving frontend testing and mentoring two junior engineers", "at": "Owning the frontend for one major product area" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Daniel Kim", "text": "Ask the recruiter to contact Marcus about next steps within the week", "at": "Our recruiter will reach out" },
+      { "assignee": "Daniel Kim", "text": "Submit the interview scorecard for Marcus", "at": "this was a great conversation", "completed": true },
+      { "assignee": "Alex Morgan", "text": "Share product collaboration notes from the interview with Daniel", "at": "How do you like to work with product and design" }
+    ]
+  }
+}

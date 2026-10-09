@@ -1,0 +1,14 @@
+[00:00:03] Nina Alvarez: Thanks for joining, everyone. Today we're reviewing the customer feedback from last month's survey. We received just over four hundred responses, which is our highest ever.
+[00:00:15] Leo Grant: That's great. What were the main themes?
+[00:00:19] Nina Alvarez: Three themes stood out. Customers love the new reporting dashboard. Many asked for better mobile support. And several mentioned that onboarding takes too long.
+[00:00:34] Leo Grant: The onboarding feedback worries me. How long does it take today?
+[00:00:39] Nina Alvarez: About three weeks on average, mostly waiting for data source approvals.
+[00:00:46] Priyanka Rao: We could prepare an approval email template for IT teams. That would cut the waiting time a lot.
+[00:00:53] Leo Grant: Good idea. Priyanka, can you draft that template by Friday?
+[00:00:58] Priyanka Rao: Sure, I'll draft the IT approval template by Friday.
+[00:01:04] Nina Alvarez: On mobile support, I think we need more data first. I'll pull the mobile usage numbers for the last quarter.
+[00:01:12] Leo Grant: Agreed. And let's share the dashboard praise with the design team, they'll love hearing it.
+[00:01:19] Nina Alvarez: I'll send the highlights to the design channel today. Anything else before we wrap up?
+[00:01:26] Priyanka Rao: Just one question. Should we run this survey every quarter?
+[00:01:31] Leo Grant: Yes, let's make it quarterly. Nina, please add it to the research calendar.
+[00:01:37] Nina Alvarez: Will do. Thanks everyone, great discussion.

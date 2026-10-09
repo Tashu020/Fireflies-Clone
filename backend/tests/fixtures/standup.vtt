@@ -1,0 +1,27 @@
+WEBVTT
+
+NOTE Exported from a video meeting recording.
+
+1
+00:00:01.000 --> 00:00:06.500
+<v Chris Wong>Morning team, let's do a quick standup. Yesterday I finished the billing page.</v>
+
+2
+00:00:07.000 --> 00:00:13.200
+<v Chris Wong>Today I'm starting on the invoice export. No blockers for me.</v>
+
+3
+00:00:13.800 --> 00:00:21.000
+<v Dana Fox>I'm still fixing the login redirect bug. It only happens on Safari, which makes it slow to test.</v>
+
+4
+00:00:21.500 --> 00:00:27.000
+<v Chris Wong>Do you need help reproducing it? I have a Mac you can borrow.</v>
+
+5
+00:00:27.400 --> 00:00:33.000
+<v Dana Fox>That would help, thanks. I'll ping you after the standup.</v>
+
+6
+00:00:33.500 --> 00:00:40.000
+<v Eli Moss>I'm reviewing pull requests today and I will update the deployment docs by Thursday.</v>

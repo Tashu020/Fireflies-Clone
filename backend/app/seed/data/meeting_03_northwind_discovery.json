@@ -1,0 +1,94 @@
+{
+  "title": "Sales Discovery Call – Northwind Traders",
+  "days_ago": 1,
+  "hours_ago": 6,
+  "host": "priya.shah@acme.example",
+  "source": "notetaker",
+  "participants": ["alex.morgan@acme.example", "emily.chen@northwind.example", "raj.patel@northwind.example"],
+  "transcript": [
+    "Priya Shah: Hi Emily, hi Raj, thanks so much for making time today. I'm Priya, I lead sales here at Acme, and I'm joined by Alex, our head of product. The goal for today is to understand how your support team works and see whether Beacon is a good fit.",
+    "Emily Chen: Thanks for having us. I run customer operations at Northwind, so the support team reports to me. Raj leads IT and he's here mostly to make sure whatever we pick plays nicely with our systems.",
+    "Raj Patel: That's right. I'm the one who gets the call when an integration breaks at two in the morning, so I'll have a few technical questions.",
+    "Priya Shah: Perfect, we love technical questions. Emily, could you start by walking us through your current setup?",
+    "Emily Chen: Sure. We have about eighty support agents across three regions. We use Zendesk for tickets and Slack for internal escalations. Reporting today is mostly spreadsheets. Every Monday two of my team leads spend half a day pulling numbers into a deck for leadership.",
+    "Alex Morgan: Half a day every week is a lot. What are the main metrics that end up in that deck?",
+    "Emily Chen: First response time, resolution time, backlog by priority and customer satisfaction scores. We also try to track which product areas generate the most tickets, but honestly that part is mostly guesswork right now.",
+    "Priya Shah: That's a very common pain point. What happens when something spikes, like a sudden jump in tickets about one product area?",
+    "Emily Chen: Usually we find out too late. Last quarter we had an outage in our payments flow and it took us almost a full day to realize the ticket spike was related. By then we had hundreds of frustrated customers waiting.",
+    "Alex Morgan: That's exactly the scenario our Slack alerts feature is built for. Beacon watches ticket volume by topic and posts an alert into a channel when something unusual happens. It's launching in our next release.",
+    "Emily Chen: That would have saved us a lot of pain. How quickly would we get an alert?",
+    "Alex Morgan: Typically within ten to fifteen minutes of the spike starting. You can tune the sensitivity per channel, so you don't get woken up for small fluctuations.",
+    "Raj Patel: How does Beacon connect to Zendesk? Is it an API token or OAuth?",
+    "Alex Morgan: It's OAuth with read only scopes. We never write back to your Zendesk instance. Historical data syncs in the first few hours, and after that we pull updates every few minutes.",
+    "Raj Patel: Good. What about data residency? Our legal team will ask whether data stays in the EU for our European customers.",
+    "Priya Shah: We host in both the US and the EU, and you can choose the region when the workspace is created. I'll send over our security documentation and the data processing agreement after this call.",
+    "Raj Patel: That would be great. Do you support single sign on? We use Okta for everything.",
+    "Alex Morgan: Yes, SAML single sign on with Okta is supported on the business plan, and we also support SCIM provisioning so accounts are created and removed automatically.",
+    "Raj Patel: Okay, that covers my main concerns. I'll need to run it past our security review, but nothing here is a blocker.",
+    "Emily Chen: From my side, the big question is cost. We have a fixed budget for tooling this year. How is Beacon priced?",
+    "Priya Shah: Pricing is per agent seat, with volume discounts above fifty seats. For eighty agents on the business plan you'd be looking at roughly forty dollars per seat per month. I'll put together a formal proposal with the exact numbers.",
+    "Emily Chen: That's within the range we were expecting. Is there a way to try it before we commit?",
+    "Priya Shah: Absolutely. We can set up a thirty day pilot with one of your regions, using your real Zendesk data. Most teams see meaningful insights within the first week.",
+    "Emily Chen: I like that idea. Let's start with the EMEA team, they're the most data driven and they'll give honest feedback.",
+    "Alex Morgan: Great choice. And since you're interested in alerts, we can enable the Slack alerts feature for your pilot workspace as soon as it ships.",
+    "Emily Chen: Wonderful. What do you need from us to get started?",
+    "Priya Shah: Three things. A list of pilot users, a Zendesk admin to approve the OAuth connection, and a thirty minute kickoff call with your EMEA team lead. I'll send a short checklist by email today.",
+    "Raj Patel: I can handle the Zendesk connection. Just send me the instructions.",
+    "Priya Shah: Will do. To recap, I'll send the security documents, the data processing agreement, the pricing proposal and the pilot checklist. Emily will share the pilot user list, and Raj will approve the Zendesk connection. Does that sound right?",
+    "Emily Chen: That sounds right. Thanks both, this was really helpful.",
+    "Priya Shah: Thank you, we're excited to work with you. Talk soon."
+  ],
+  "summary": {
+    "gist": "Northwind Traders' customer operations and IT leads explored Beacon and agreed to a 30-day pilot with their EMEA support team.",
+    "overview": "Priya and Alex met Emily Chen (customer operations) and Raj Patel (IT) from Northwind Traders. Northwind's 80 support agents rely on Zendesk, Slack and manual spreadsheet reporting that costs team leads half a day every week, and they struggle to detect ticket spikes, as a payments outage last quarter showed. Beacon's upcoming Slack alerts resonated strongly. Raj's questions about the Zendesk OAuth integration, EU data residency and Okta single sign-on were answered without blockers. Pricing of roughly $40 per seat per month fits Northwind's budget, and both sides agreed to a 30-day pilot with the EMEA team.",
+    "keywords": ["Northwind Traders", "Zendesk integration", "Slack alerts", "Data residency", "Single sign-on", "Pricing", "Pilot", "Reporting"],
+    "chapters": [
+      {
+        "title": "Current Support Setup",
+        "at": "walking us through your current setup",
+        "intro": "Northwind's support reporting is manual and slow.",
+        "points": [
+          { "text": "Northwind has about eighty agents in three regions using Zendesk and Slack, with reporting done in spreadsheets", "at": "about eighty support agents", "children": ["Two team leads spend half a day every Monday building a leadership deck."] },
+          { "text": "Key metrics are first response time, resolution time, backlog by priority and satisfaction, while product area tracking is mostly guesswork", "at": "First response time, resolution time" },
+          { "text": "A payments outage last quarter took almost a full day to connect to the ticket spike", "at": "outage in our payments flow", "children": ["Hundreds of customers were left waiting."] }
+        ]
+      },
+      {
+        "title": "Slack Alerts Fit",
+        "at": "exactly the scenario our Slack alerts feature",
+        "intro": "Beacon's alerting addresses Northwind's spike detection gap.",
+        "points": [
+          { "text": "Beacon monitors ticket volume by topic and posts Slack alerts, typically within ten to fifteen minutes of a spike", "at": "within ten to fifteen minutes", "children": ["Sensitivity can be tuned per channel."] }
+        ]
+      },
+      {
+        "title": "Technical and Security Review",
+        "at": "How does Beacon connect to Zendesk",
+        "intro": "IT's integration and compliance questions were answered.",
+        "points": [
+          { "text": "The Zendesk integration uses read only OAuth scopes and syncs updates every few minutes", "at": "OAuth with read only scopes" },
+          { "text": "Data can be hosted in the US or the EU, chosen per workspace", "at": "We host in both the US and the EU" },
+          { "text": "SAML single sign on with Okta and SCIM provisioning are supported on the business plan", "at": "SAML single sign on with Okta", "children": ["Raj sees no blockers, pending Northwind's internal security review."] }
+        ]
+      },
+      {
+        "title": "Pricing and Pilot",
+        "at": "the big question is cost",
+        "intro": "Pricing fits the budget and a pilot was agreed.",
+        "points": [
+          { "text": "Pricing is per agent seat, roughly forty dollars per month for eighty agents on the business plan", "at": "roughly forty dollars per seat" },
+          { "text": "A thirty day pilot will start with the EMEA team on real Zendesk data, with Slack alerts enabled once released", "at": "start with the EMEA team" },
+          { "text": "Next steps were agreed for both sides", "at": "To recap, I'll send the security documents" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Priya Shah", "text": "Send the security documentation and data processing agreement to Northwind", "at": "send over our security documentation" },
+      { "assignee": "Priya Shah", "text": "Prepare a formal pricing proposal for eighty business plan seats", "at": "formal proposal with the exact numbers" },
+      { "assignee": "Priya Shah", "text": "Email the pilot onboarding checklist to Northwind", "at": "send a short checklist by email today", "completed": true },
+      { "assignee": "Emily Chen", "text": "Share the list of EMEA pilot users", "at": "Emily will share the pilot user list" },
+      { "assignee": "Raj Patel", "text": "Approve the Zendesk OAuth connection for the pilot workspace", "at": "I can handle the Zendesk connection" },
+      { "assignee": "Alex Morgan", "text": "Enable Slack alerts for the Northwind pilot workspace when the feature ships", "at": "enable the Slack alerts feature for your pilot workspace" }
+    ]
+  }
+}

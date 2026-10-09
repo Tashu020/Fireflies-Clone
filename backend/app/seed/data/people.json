@@ -1,0 +1,14 @@
+[
+  { "name": "Alex Morgan", "email": "alex.morgan@acme.example", "workspace_user": true },
+  { "name": "Priya Shah", "email": "priya.shah@acme.example", "workspace_user": true },
+  { "name": "Daniel Kim", "email": "daniel.kim@acme.example", "workspace_user": true },
+  { "name": "Maria Lopez", "email": "maria.lopez@acme.example" },
+  { "name": "Sam Carter", "email": "sam.carter@acme.example" },
+  { "name": "Jordan Lee", "email": "jordan.lee@acme.example" },
+  { "name": "Hannah Wright", "email": "hannah.wright@acme.example" },
+  { "name": "Tom Becker", "email": "tom.becker@acme.example" },
+  { "name": "Emily Chen", "email": "emily.chen@northwind.example" },
+  { "name": "Raj Patel", "email": "raj.patel@northwind.example" },
+  { "name": "Olivia Brooks", "email": "olivia.brooks@globex.example" },
+  { "name": "Marcus Reed", "email": "marcus.reed@candidate.example" }
+]

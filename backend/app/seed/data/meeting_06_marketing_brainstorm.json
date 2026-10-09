@@ -1,0 +1,92 @@
+{
+  "title": "Marketing Campaign Brainstorm – Release 2.4",
+  "days_ago": 5,
+  "hours_ago": 5,
+  "host": "alex.morgan@acme.example",
+  "source": "upload",
+  "participants": ["jordan.lee@acme.example", "priya.shah@acme.example"],
+  "transcript": [
+    "Jordan Lee: Okay, thanks for jumping on. The goal today is to brainstorm the launch campaign for release 2.4. I'd love to leave with a core message, a channel plan and a rough timeline.",
+    "Alex Morgan: Sounds good. Quick context, 2.4 ships in about ten days with the redesigned dashboard and Slack alerts. Alerts are the headline feature from a customer point of view.",
+    "Jordan Lee: Agreed. So what's the one problem alerts solve, in the customer's words?",
+    "Priya Shah: On sales calls, people describe finding out about problems too late. One customer told us an outage took almost a full day to show up in their support numbers.",
+    "Jordan Lee: That's a strong story. Something like, know about support spikes in minutes, not days.",
+    "Alex Morgan: I like that. It's concrete and it's true, alerts typically fire within ten to fifteen minutes.",
+    "Jordan Lee: Great, let's use that as the working headline. For the dashboard redesign, I'd position it as a supporting message, something about seeing what matters at a glance.",
+    "Priya Shah: The pinned metrics row demos really well, so I'd show it in every visual.",
+    "Jordan Lee: Noted. Now channels. I'm thinking a launch blog post, an email to existing customers, LinkedIn posts, and a live webinar a week after launch.",
+    "Priya Shah: The webinar is a great idea. Prospects love seeing a live demo, and it gives sales a reason to follow up.",
+    "Alex Morgan: Could we include a customer in the webinar? It's much more credible than us talking about ourselves.",
+    "Jordan Lee: Ideally yes. Do we have a customer who has used alerts?",
+    "Alex Morgan: Not yet, it's not released. But Globex has been testing the new dashboard and they've been very positive. Their support operations manager might be willing to join.",
+    "Priya Shah: Let me be careful there, Globex is still in onboarding. I'd ask Hannah first, since she owns the relationship.",
+    "Jordan Lee: Good call. I'll check with Hannah before we reach out to anyone at Globex. What about budget? I have about eight thousand dollars left for this quarter.",
+    "Priya Shah: I'd put most of it into LinkedIn ads targeting support leaders. Our best deals this year came from that audience.",
+    "Jordan Lee: That makes sense. Let's say six thousand on LinkedIn and two thousand for webinar production and promotion.",
+    "Alex Morgan: Works for me. How will we measure success?",
+    "Jordan Lee: Primary metric is webinar registrations, target three hundred. Secondary metrics are alert activations among existing customers in the first month, and demo requests mentioning alerts.",
+    "Alex Morgan: For activations, I can add tracking so we know how many workspaces turn on Slack alerts each week.",
+    "Jordan Lee: That would be really helpful. Now timeline. The blog post and customer email go out on launch day. LinkedIn starts the same day and runs for three weeks. The webinar happens the following Thursday.",
+    "Priya Shah: Can sales get the messaging a few days early? I'd like to brief the team before launch day.",
+    "Jordan Lee: Yes, I'll have a messaging doc ready by Monday.",
+    "Alex Morgan: We'll also need a 2.4 one pager for sales at some point, so let's make sure the messaging is consistent.",
+    "Jordan Lee: Perfect, I'll make the messaging doc the single source of truth for both. Last thing, the webinar needs a demo script. Alex, could you own the product demo portion?",
+    "Alex Morgan: Happy to. I'll draft a fifteen minute demo flow focused on alerts.",
+    "Priya Shah: Could the demo use a realistic support scenario rather than our sample data? It lands much better with support leaders.",
+    "Alex Morgan: Good idea. I'll build the demo around a simulated outage, with the alert firing and the team responding in Slack.",
+    "Jordan Lee: Excellent. Let me summarize. Headline is know about support spikes in minutes, not days. Channels are blog, customer email, LinkedIn and a webinar. Budget is six thousand for LinkedIn and two thousand for the webinar. I'll write the messaging doc, Alex drafts the demo and adds activation tracking, and I'll check with Hannah about Globex.",
+    "Priya Shah: Great session, thanks Jordan.",
+    "Alex Morgan: Thanks everyone, this is going to be a fun launch."
+  ],
+  "summary": {
+    "gist": "The team built the release 2.4 launch campaign around Slack alerts with the headline: know about support spikes in minutes, not days.",
+    "overview": "Jordan led a brainstorm for the release 2.4 launch. Slack alerts will be the headline feature, positioned with the message know about support spikes in minutes, not days, while the dashboard redesign supports it with an at-a-glance message featuring the pinned metrics row. Channels are a launch blog post, a customer email, three weeks of LinkedIn ads and a webinar the Thursday after launch. The remaining $8,000 budget is split $6,000 for LinkedIn and $2,000 for the webinar. Success will be measured by 300 webinar registrations, alert activations and demo requests mentioning alerts.",
+    "keywords": ["Launch campaign", "Release 2.4", "Slack alerts", "Messaging", "Webinar", "LinkedIn ads", "Budget", "Activation tracking"],
+    "chapters": [
+      {
+        "title": "Core Message",
+        "at": "what's the one problem alerts solve",
+        "intro": "The campaign leads with the problem alerts solve.",
+        "points": [
+          { "text": "Customers find out about problems too late, such as an outage that took almost a day to appear in support numbers", "at": "finding out about problems too late" },
+          { "text": "The working headline is know about support spikes in minutes, not days", "at": "know about support spikes in minutes", "children": ["Alerts typically fire within ten to fifteen minutes, so the claim is accurate."] },
+          { "text": "The dashboard redesign is a supporting message, with the pinned metrics row in every visual", "at": "position it as a supporting message" }
+        ]
+      },
+      {
+        "title": "Channels and Webinar",
+        "at": "Now channels",
+        "intro": "Four channels were chosen, anchored by a live webinar.",
+        "points": [
+          { "text": "Channels are a launch blog post, a customer email, LinkedIn posts and a live webinar a week after launch", "at": "launch blog post" },
+          { "text": "A customer speaker would add credibility; Globex is a candidate but Hannah must be consulted first", "at": "Globex is still in onboarding" }
+        ]
+      },
+      {
+        "title": "Budget and Metrics",
+        "at": "What about budget",
+        "intro": "Budget and success metrics were agreed.",
+        "points": [
+          { "text": "The remaining eight thousand dollars is split six thousand for LinkedIn ads and two thousand for the webinar", "at": "six thousand on LinkedIn" },
+          { "text": "Success metrics are three hundred webinar registrations, alert activations and demo requests mentioning alerts", "at": "target three hundred" }
+        ]
+      },
+      {
+        "title": "Timeline and Demo",
+        "at": "Now timeline",
+        "intro": "Launch day activities and the webinar demo were planned.",
+        "points": [
+          { "text": "Blog, email and LinkedIn launch on release day, with the webinar the following Thursday", "at": "go out on launch day" },
+          { "text": "Sales gets the messaging doc by Monday, and it becomes the single source of truth for the sales one pager", "at": "messaging doc ready by Monday" },
+          { "text": "Alex will build a fifteen minute webinar demo around a simulated outage", "at": "simulated outage" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Jordan Lee", "text": "Write the launch messaging doc and share it with sales by Monday", "at": "messaging doc ready by Monday" },
+      { "assignee": "Jordan Lee", "text": "Check with Hannah before inviting Globex to the webinar", "at": "I'll check with Hannah", "completed": true },
+      { "assignee": "Alex Morgan", "text": "Draft a fifteen minute webinar demo flow built around a simulated outage", "at": "fifteen minute demo flow" },
+      { "assignee": "Alex Morgan", "text": "Add weekly tracking of Slack alert activations", "at": "add tracking so we know" }
+    ]
+  }
+}

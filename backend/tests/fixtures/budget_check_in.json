@@ -1,0 +1,9 @@
+{
+  "segments": [
+    { "speaker": "Grace Hall", "start": 0.5, "end": 7.2, "text": "Let's review the marketing budget for next quarter. We have forty thousand dollars approved so far." },
+    { "speaker": "Omar Said", "start": 7.8, "end": 14.0, "text": "Most of it should go to events. The industry conference alone costs about fifteen thousand dollars." },
+    { "speaker": "Grace Hall", "start": 14.5, "end": 20.1, "text": "That seems high. Can you get a quote for a smaller booth?" },
+    { "speaker": "Omar Said", "start": 20.6, "end": 25.0, "text": "Sure, I will ask the organizers for a smaller booth quote this week." },
+    { "speaker": "Grace Hall", "start": 25.4, "end": 31.9, "text": "Great. I'll update the budget spreadsheet once we have the quote, and we can decide on Monday." }
+  ]
+}

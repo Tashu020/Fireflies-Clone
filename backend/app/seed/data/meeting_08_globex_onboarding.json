@@ -1,0 +1,90 @@
+{
+  "title": "Customer Onboarding – Globex",
+  "days_ago": 10,
+  "hours_ago": 3,
+  "host": "alex.morgan@acme.example",
+  "source": "notetaker",
+  "participants": ["hannah.wright@acme.example", "olivia.brooks@globex.example"],
+  "transcript": [
+    "Hannah Wright: Hi Olivia, welcome to your onboarding kickoff. I'm Hannah, I'll be your customer success manager, and Alex from our product team is joining us today as well.",
+    "Olivia Brooks: Hi both, thanks for setting this up. We're excited to finally get started.",
+    "Alex Morgan: Great to meet you, Olivia. I wanted to join because Globex is one of our first customers on the new dashboard, and your feedback really matters to us.",
+    "Hannah Wright: Let's start with goals. What does success look like for Globex in the first ninety days?",
+    "Olivia Brooks: Three things. First, we want to cut the time our team leads spend on weekly reporting. Second, we want visibility into ticket trends by product line. And third, we want to bring our average first response time under two hours.",
+    "Hannah Wright: Those are very clear goals. Where is first response time today?",
+    "Olivia Brooks: Around three hours and twenty minutes on average, but it varies a lot by region. Asia Pacific is much slower because they're understaffed.",
+    "Alex Morgan: That's a useful detail. Beacon can break response time down by region and by hour of day, which usually makes staffing gaps obvious.",
+    "Olivia Brooks: That would be really helpful for our workforce planning conversations. Is there also a way to get warned before we breach our response time targets?",
+    "Alex Morgan: Yes, you can set a target per queue, and Beacon highlights tickets that are about to breach it. With release 2.4 those warnings can also go to Slack.",
+    "Olivia Brooks: That's great, our leads live in Slack all day.",
+    "Hannah Wright: Let's look at your setup. I can see your Zendesk instance is already connected and the historical sync finished last night. You have about fourteen months of ticket history in Beacon now.",
+    "Olivia Brooks: Yes, our admin connected it on Friday. It was surprisingly easy.",
+    "Hannah Wright: Great to hear. Next I'd suggest we create three dashboards together. One for leadership with the weekly summary, one for team leads with queue health, and one for product line trends.",
+    "Olivia Brooks: That sounds perfect. Can the leadership dashboard be emailed automatically every Monday?",
+    "Hannah Wright: Yes, any dashboard can be scheduled as a PDF or a link. I'll set up the Monday schedule for your leadership group.",
+    "Olivia Brooks: One concern I wanted to raise. Last week we tried to export a large ticket list to CSV and it timed out. That's a problem because our finance team needs that export every month.",
+    "Alex Morgan: Thanks for flagging that, and sorry about the trouble. It's a known issue with very large exports, and the fix is planned for our next release. In the meantime, if you filter the export by month, each file stays small enough to work.",
+    "Olivia Brooks: Okay, that workaround is fine for now. When is the release expected?",
+    "Alex Morgan: We're targeting release 2.4 in about two weeks. I'll make sure Hannah lets you know as soon as it's live.",
+    "Hannah Wright: I'll add that to our check in notes. Now, training. How many people will use Beacon day to day?",
+    "Olivia Brooks: About twelve team leads and three managers. The agents themselves probably won't log in much.",
+    "Hannah Wright: Then I suggest two training sessions. A forty five minute session for team leads focused on queue health and filters, and a shorter session for managers on dashboards and scheduling.",
+    "Olivia Brooks: That works. Can we record them for people who can't attend?",
+    "Hannah Wright: Of course, I'll record both and share the recordings along with our help center guides. Last thing, I'd like to set up a weekly thirty minute check in for the first six weeks, so we can track progress against your goals.",
+    "Olivia Brooks: Yes, let's do Wednesdays if possible. Mornings work best for my team.",
+    "Hannah Wright: Wednesday mornings it is. To summarize, I'll build the three dashboards, schedule the Monday leadership email, and organize the two training sessions. Olivia, you'll send me the list of team leads and managers who need accounts.",
+    "Olivia Brooks: Perfect, I'll send the list today. Thank you both, this was a great start.",
+    "Alex Morgan: Thank you Olivia, we're really glad to have Globex on board."
+  ],
+  "summary": {
+    "gist": "Globex kicked off onboarding with clear 90-day goals, three dashboards to build, a CSV export workaround and a training plan.",
+    "overview": "Hannah (customer success) and Alex met Olivia Brooks from Globex to kick off onboarding. Globex's 90-day goals are less time on weekly reporting, visibility into ticket trends by product line and a first response time under two hours, down from about 3 hours 20 minutes today. Zendesk is connected with 14 months of history synced. Hannah will build leadership, team lead and product line dashboards and schedule a Monday leadership email. Olivia raised the known CSV export timeout; filtering exports by month is the workaround until release 2.4. Two recorded training sessions and weekly Wednesday check-ins were agreed.",
+    "keywords": ["Onboarding", "Globex", "First response time", "Dashboards", "Scheduled reports", "CSV export", "Training", "Zendesk"],
+    "chapters": [
+      {
+        "title": "Goals and Baseline",
+        "at": "What does success look like",
+        "intro": "Globex defined three goals for the first ninety days.",
+        "points": [
+          { "text": "Globex wants less time spent on weekly reporting, ticket trends by product line and a first response time under two hours", "at": "we want to cut the time our team leads spend" },
+          { "text": "First response time is around three hours twenty minutes today, slowest in understaffed Asia Pacific", "at": "three hours and twenty minutes", "children": ["Beacon can break response time down by region and hour of day to expose staffing gaps."] },
+          { "text": "Response time targets can be set per queue with breach warnings, which will reach Slack in release 2.4", "at": "set a target per queue" }
+        ]
+      },
+      {
+        "title": "Setup and Dashboards",
+        "at": "Let's look at your setup",
+        "intro": "The integration is live and dashboards were planned.",
+        "points": [
+          { "text": "Zendesk is connected and fourteen months of ticket history have synced", "at": "fourteen months of ticket history" },
+          { "text": "Hannah will create leadership, team lead and product line dashboards, with the leadership dashboard emailed every Monday", "at": "create three dashboards together" }
+        ]
+      },
+      {
+        "title": "CSV Export Issue",
+        "at": "One concern I wanted to raise",
+        "intro": "A known export issue affects Globex's finance workflow.",
+        "points": [
+          { "text": "Large CSV exports are timing out, which blocks a monthly finance export", "at": "export a large ticket list to CSV", "children": ["Filtering exports by month is the workaround until the fix ships in release 2.4."] }
+        ]
+      },
+      {
+        "title": "Training and Check-ins",
+        "at": "Now, training",
+        "intro": "Enablement was planned for fifteen users.",
+        "points": [
+          { "text": "Two recorded sessions will run, forty five minutes for team leads and a shorter one for managers", "at": "two training sessions" },
+          { "text": "Weekly thirty minute check ins will run on Wednesday mornings for six weeks", "at": "Wednesday mornings it is" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Hannah Wright", "text": "Build the leadership, team lead and product line dashboards", "at": "I'll build the three dashboards" },
+      { "assignee": "Hannah Wright", "text": "Schedule the Monday leadership dashboard email", "at": "set up the Monday schedule", "completed": true },
+      { "assignee": "Hannah Wright", "text": "Organize and record the two training sessions", "at": "record both and share the recordings" },
+      { "assignee": "Hannah Wright", "text": "Notify Globex when the CSV export fix is live", "at": "Hannah lets you know as soon as it's live" },
+      { "assignee": "Hannah Wright", "text": "Set up weekly Wednesday morning check-ins for six weeks", "at": "weekly thirty minute check in", "completed": true },
+      { "assignee": "Olivia Brooks", "text": "Send the list of team leads and managers who need accounts", "at": "I'll send the list today", "completed": true }
+    ]
+  }
+}

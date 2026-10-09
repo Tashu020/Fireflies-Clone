@@ -1,0 +1,28 @@
+# Render Blueprint for the backend (Render dashboard → New → Blueprint → select this repo).
+# The frontend is deployed separately on Vercel — see DEPLOYMENT.md.
+#
+# Free plan ($0): the free instance sleeps after 15 minutes without traffic (an UptimeRobot ping
+# keeps it awake — DEPLOYMENT.md Part G) and its disk is not persistent, so on each restart the
+# SQLite database is recreated and the demo meetings re-seeded (their links stay the same).
+services:
+  - type: web
+    name: fireflies-clone-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////data/app.db
+      - key: SEED_ON_STARTUP
+        value: "true"
+      # Comma-separated frontend origin(s), e.g. https://your-app.vercel.app — asked on first deploy.
+      - key: CORS_ORIGINS
+        sync: false
+      # Optional free Groq key (console.groq.com) for AI notes and AskFred — asked on first deploy.
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b

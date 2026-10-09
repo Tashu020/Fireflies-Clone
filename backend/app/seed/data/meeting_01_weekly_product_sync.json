@@ -1,0 +1,95 @@
+{
+  "title": "Weekly Product Sync",
+  "days_ago": 0,
+  "hours_ago": 4,
+  "host": "alex.morgan@acme.example",
+  "source": "notetaker",
+  "participants": ["priya.shah@acme.example", "maria.lopez@acme.example", "sam.carter@acme.example", "daniel.kim@acme.example"],
+  "absent": ["daniel.kim@acme.example"],
+  "transcript": [
+    "Alex Morgan: Good morning everyone, thanks for joining the weekly product sync. We have a packed agenda today, so let's keep things moving. First the 2.4 release status, then beta feedback, and finally the onboarding metrics.",
+    "Sam Carter: Morning. Quick heads up, I might need to drop five minutes early for the infrastructure review.",
+    "Alex Morgan: No problem, we'll cover engineering items first. Sam, where are we on the 2.4 release?",
+    "Sam Carter: We're in good shape overall. The new dashboard layout is code complete and merged behind a feature flag. Slack alerts are about ninety percent done, we still need to finish rate limiting so a busy queue doesn't spam a channel. I'd estimate two more days for that.",
+    "Alex Morgan: Great. Does that still put us on track for the release next Thursday?",
+    "Sam Carter: It does, as long as QA can start on Monday. The one risk is the CSV export bug that came in from two beta customers. Large exports over fifty thousand rows are timing out.",
+    "Maria Lopez: Is that the same issue the Globex team reported last week?",
+    "Sam Carter: Yes, same root cause. We generate the whole file in memory before streaming it. The fix is to stream rows in batches, which is not hard, but I want to load test it properly before we ship.",
+    "Alex Morgan: Let's treat the export fix as a release blocker then. I'd rather slip a day than ship something that fails for our biggest accounts. Sam, can you own that and give us an update by Friday?",
+    "Sam Carter: Sure, I'll have the batched export ready for review by Friday.",
+    "Alex Morgan: Perfect. Maria, how did the beta feedback sessions go on the new dashboard?",
+    "Maria Lopez: Really positive overall. We ran six sessions and five of the six participants found the new layout faster to scan. People loved the pinned metrics row at the top. The main point of confusion was the date range picker, three people didn't notice that it applies to every widget on the page.",
+    "Priya Shah: That matches what I heard on sales calls. Prospects assume each chart has its own filter, because that's how most of our competitors do it.",
+    "Maria Lopez: Right. My proposal is to move the date picker into the page header and add a small label that says applies to all widgets. It's a small change and I can have a mockup today.",
+    "Alex Morgan: I like that. It's low effort and directly addresses the confusion. Sam, would that change affect the release scope?",
+    "Sam Carter: If it's just moving the component and adding a label, no. Anything that changes the filtering logic would be a different story.",
+    "Maria Lopez: It's purely visual, I promise. I'll share the mockup in the design channel this afternoon.",
+    "Alex Morgan: Great, thanks Maria. Anything else from the sessions?",
+    "Maria Lopez: One more thing. Two participants asked for a dark mode. It's not urgent, but it came up unprompted, so I'm noting it for the roadmap.",
+    "Alex Morgan: Good to know, let's add it to the backlog and revisit during quarterly planning. Priya, anything from the sales side that affects the release?",
+    "Priya Shah: Yes, two things. First, Northwind Traders is very interested in Slack alerts, it came up on our discovery call yesterday. If we can give them early access that would really help the deal. Second, I need a one pager on 2.4 for the sales team by next week.",
+    "Alex Morgan: Early access for Northwind should be fine once the flag is ready. Sam, can we enable the flag per account?",
+    "Sam Carter: Yes, flags are per workspace, so we can turn it on just for them.",
+    "Alex Morgan: Then let's plan to enable Slack alerts for Northwind right after QA signs off. I'll write the release one pager for sales and share it with you by Wednesday.",
+    "Priya Shah: Thank you, that helps a lot.",
+    "Alex Morgan: Last topic, onboarding metrics. Our activation rate for new workspaces went from thirty one percent to thirty eight percent since we launched the onboarding checklist. That's a solid improvement.",
+    "Priya Shah: That's great news. Do we know which checklist step has the biggest drop off?",
+    "Alex Morgan: Connecting the first data source. About forty percent of people stall there. I think a short in-app video could help, but I want to look at the session recordings before deciding.",
+    "Maria Lopez: I can help with that. I'll pull ten session recordings of people who dropped at that step and summarize the patterns.",
+    "Alex Morgan: That would be very helpful, thank you. Okay, let me recap the action items. Sam owns the batched CSV export fix by Friday. Maria shares the date picker mockup today and reviews the onboarding recordings. I'll write the sales one pager by Wednesday, and we'll enable Slack alerts for Northwind after QA.",
+    "Sam Carter: Sounds good. I'll drop now for the infrastructure review.",
+    "Alex Morgan: Thanks everyone, great progress this week. See you next Monday."
+  ],
+  "summary": {
+    "gist": "The team confirmed the 2.4 release plan, made the CSV export fix a release blocker and reviewed positive dashboard beta feedback.",
+    "overview": "The team reviewed release 2.4, which remains on track for next Thursday as long as QA starts on Monday. The CSV export timeout reported by beta customers was made a release blocker, with a batched streaming fix due Friday. Beta sessions on the redesigned dashboard were positive; the main confusion was the date range picker, which will move into the page header. Sales asked for early Slack alerts access for Northwind Traders and a one pager on 2.4. Activation for new workspaces rose from 31% to 38% since the onboarding checklist launched, with connecting the first data source as the biggest drop-off.",
+    "keywords": ["Release 2.4", "CSV export", "Slack alerts", "Dashboard redesign", "Date range picker", "Onboarding checklist", "Activation rate", "Feature flags"],
+    "chapters": [
+      {
+        "title": "Release 2.4 Status",
+        "at": "where are we on the 2.4 release",
+        "intro": "Release 2.4 is on track for next Thursday, with one release blocker identified.",
+        "points": [
+          { "text": "The new dashboard layout is code complete and merged behind a feature flag, while Slack alerts need about two more days for rate limiting", "at": "The new dashboard layout is code complete", "children": ["The release date holds as long as QA can start on Monday.", "Rate limiting prevents a busy queue from spamming a Slack channel."] },
+          { "text": "Large CSV exports over fifty thousand rows time out for two beta customers because the whole file is built in memory", "at": "Large exports over fifty thousand rows", "children": ["Sam will stream rows in batches and load test before shipping.", "Alex made the fix a release blocker, preferring a one day slip over failures for the biggest accounts."] }
+        ]
+      },
+      {
+        "title": "Dashboard Beta Feedback",
+        "at": "how did the beta feedback sessions go",
+        "intro": "Beta testing of the redesigned dashboard was largely positive.",
+        "points": [
+          { "text": "Five of six beta participants found the new layout faster to scan and liked the pinned metrics row", "at": "five of the six participants", "children": ["Three participants missed that the date range picker applies to every widget.", "Priya confirmed prospects assume each chart has its own filter."] },
+          { "text": "The date picker will move into the page header with an applies to all widgets label, a visual only change outside release scope", "at": "move the date picker into the page header", "children": ["Sam confirmed the change is safe as long as the filtering logic is untouched."] },
+          { "text": "Two participants requested dark mode unprompted, so it was added to the backlog for quarterly planning", "at": "asked for a dark mode" }
+        ]
+      },
+      {
+        "title": "Sales Requests",
+        "at": "anything from the sales side",
+        "intro": "Sales raised two requests tied to active deals.",
+        "points": [
+          { "text": "Northwind Traders wants early access to Slack alerts, which can be enabled per workspace after QA sign off", "at": "Northwind Traders is very interested in Slack alerts", "children": ["Feature flags are scoped per workspace."] },
+          { "text": "Alex will write a 2.4 one pager for the sales team by Wednesday", "at": "I'll write the release one pager" }
+        ]
+      },
+      {
+        "title": "Onboarding Metrics",
+        "at": "Last topic, onboarding metrics",
+        "intro": "The onboarding checklist is improving activation.",
+        "points": [
+          { "text": "Activation for new workspaces rose from thirty one to thirty eight percent since the checklist launched", "at": "thirty one percent to thirty eight percent" },
+          { "text": "About forty percent of users stall when connecting their first data source; recordings will be reviewed before deciding on an in-app video", "at": "Connecting the first data source", "children": ["Maria will summarize patterns from ten session recordings."] }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Sam Carter", "text": "Implement batched streaming for large CSV exports and share it for review by Friday", "at": "batched export ready for review by Friday" },
+      { "assignee": "Maria Lopez", "text": "Share the updated date range picker mockup in the design channel", "at": "share the mockup in the design channel", "completed": true },
+      { "assignee": "Maria Lopez", "text": "Review ten onboarding session recordings and summarize the drop-off patterns", "at": "pull ten session recordings" },
+      { "assignee": "Alex Morgan", "text": "Write the 2.4 release one pager for the sales team by Wednesday", "at": "I'll write the release one pager" },
+      { "assignee": "Alex Morgan", "text": "Enable Slack alerts for Northwind Traders after QA sign off", "at": "enable Slack alerts for Northwind right after QA" },
+      { "assignee": "Alex Morgan", "text": "Add dark mode to the product backlog for quarterly planning", "at": "add it to the backlog", "completed": true }
+    ]
+  }
+}

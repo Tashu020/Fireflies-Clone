@@ -1,0 +1,94 @@
+{
+  "title": "Design Review: Dashboard Redesign",
+  "days_ago": 2,
+  "hours_ago": 3,
+  "host": "alex.morgan@acme.example",
+  "source": "chrome_extension",
+  "participants": ["maria.lopez@acme.example", "priya.shah@acme.example", "sam.carter@acme.example"],
+  "transcript": [
+    "Maria Lopez: Thanks for joining the design review. Today I want to walk through the final designs for the dashboard redesign and get sign off on three open questions.",
+    "Alex Morgan: Sounds good. Let's start with the overall layout.",
+    "Maria Lopez: The page now has three zones. At the top there's a pinned metrics row with up to six key numbers. Below that is a flexible grid of widgets, and on the right there's a collapsible panel for filters and saved views.",
+    "Sam Carter: Is the grid fully freeform or does it snap to columns?",
+    "Maria Lopez: It snaps to a twelve column grid. Freeform layouts looked great in demos but became messy quickly in real accounts.",
+    "Sam Carter: Good, that also makes the responsive behavior much easier to implement.",
+    "Priya Shah: I really like the pinned metrics row. In demos, the first thing every prospect asks is what are my three most important numbers right now.",
+    "Maria Lopez: That was exactly the idea. Each pinned metric shows the current value, the change versus last period and a small sparkline.",
+    "Alex Morgan: How do users choose which metrics are pinned?",
+    "Maria Lopez: There's a pin icon on every widget. If you pin more than six, we ask you to replace one. I tested this flow in the beta and nobody struggled with it.",
+    "Alex Morgan: Great. What are the open questions you mentioned?",
+    "Maria Lopez: First question is color. Our current chart palette fails accessibility contrast checks in two places, the light green and the yellow. I'm proposing a new palette that passes WCAG AA for all chart elements.",
+    "Sam Carter: Will the new palette break existing customer dashboards that use custom colors?",
+    "Maria Lopez: No, custom colors are preserved. Only the default palette changes.",
+    "Alex Morgan: Then I'm comfortable approving the new palette. Accessibility shouldn't be optional.",
+    "Priya Shah: Agreed. Some of our public sector prospects actually require it in their procurement checklists.",
+    "Maria Lopez: Second question is mobile. Do we design a dedicated mobile layout, or do we just make the desktop layout responsive?",
+    "Sam Carter: A dedicated mobile layout would roughly double the frontend work for this project.",
+    "Alex Morgan: How many people use the dashboard on mobile today?",
+    "Sam Carter: Around six percent of sessions, mostly managers checking the pinned numbers on the go.",
+    "Alex Morgan: Then let's do responsive only for now, but make sure the pinned metrics row looks great on a phone. That's what those managers actually need.",
+    "Maria Lopez: That makes sense. I'll do a quick pass on the small screen version of the metrics row. Third question is naming. In the beta we called saved filter combinations views, but several people thought views meant page views.",
+    "Priya Shah: Customers on calls usually say saved reports, so maybe we use that?",
+    "Sam Carter: Saved reports could get confused with scheduled PDF reports though.",
+    "Maria Lopez: What about saved filters? It's boring but it's very clear.",
+    "Alex Morgan: I vote for saved filters. Clear beats clever.",
+    "Priya Shah: Fine by me.",
+    "Maria Lopez: Great, saved filters it is. That's all three decisions. I'll update the designs and the copy document today.",
+    "Sam Carter: Could you also add the empty states to the handoff file? Last time we had to guess what a widget looks like with no data.",
+    "Maria Lopez: Good point. I'll add empty and loading states for every widget type before handoff.",
+    "Sam Carter: One more technical note. The sparklines should load lazily, otherwise six of them on page load will slow down the first render.",
+    "Maria Lopez: Totally fine from a design perspective. A light shimmer placeholder works while they load.",
+    "Alex Morgan: This looks fantastic, Maria. Let's plan the engineering handoff for Thursday.",
+    "Maria Lopez: Thursday works. I'll send the invite."
+  ],
+  "summary": {
+    "gist": "The team approved the final dashboard redesign, a WCAG AA chart palette, a responsive-only mobile approach and the name saved filters.",
+    "overview": "Maria presented the final dashboard redesign: a pinned metrics row of up to six numbers, a widget grid snapping to twelve columns and a collapsible filter panel. Three open questions were resolved. The default chart palette will change to pass WCAG AA contrast while preserving custom colors. Mobile will be responsive only, with special care for the pinned metrics row since about 6% of sessions are mobile. Saved filter combinations will be called saved filters. Engineering handoff is planned for Thursday and will include empty and loading states.",
+    "keywords": ["Dashboard redesign", "Pinned metrics", "Accessibility", "WCAG AA", "Responsive design", "Saved filters", "Design handoff", "Empty states"],
+    "chapters": [
+      {
+        "title": "Layout Walkthrough",
+        "at": "Let's start with the overall layout",
+        "intro": "The redesigned dashboard is organized into three zones.",
+        "points": [
+          { "text": "The page has a pinned metrics row, a widget grid and a collapsible filter panel", "at": "The page now has three zones", "children": ["The grid snaps to twelve columns because freeform layouts got messy in real accounts."] },
+          { "text": "Pinned metrics show the current value, the change versus last period and a sparkline, with up to six pins", "at": "Each pinned metric shows the current value", "children": ["Prospects always ask for their three most important numbers first."] }
+        ]
+      },
+      {
+        "title": "Accessible Chart Palette",
+        "at": "First question is color",
+        "intro": "The default chart palette will change for accessibility.",
+        "points": [
+          { "text": "The current palette fails contrast checks in light green and yellow, so a new WCAG AA palette was approved", "at": "fails accessibility contrast checks", "children": ["Custom customer colors are preserved.", "Public sector procurement checklists often require accessibility."] }
+        ]
+      },
+      {
+        "title": "Mobile Approach",
+        "at": "Second question is mobile",
+        "intro": "Mobile will be handled with a responsive layout.",
+        "points": [
+          { "text": "A dedicated mobile layout would double frontend work while only about six percent of sessions are mobile", "at": "Around six percent of sessions" },
+          { "text": "The team chose a responsive only approach with a polished pinned metrics row on phones", "at": "let's do responsive only for now" }
+        ]
+      },
+      {
+        "title": "Naming and Handoff",
+        "at": "Third question is naming",
+        "intro": "Terminology and handoff details were finalized.",
+        "points": [
+          { "text": "Saved filter combinations will be called saved filters instead of views", "at": "saved filters it is", "children": ["Views was confused with page views, and saved reports with scheduled PDF reports."] },
+          { "text": "Empty and loading states will be added for every widget, and sparklines will load lazily", "at": "add empty and loading states" },
+          { "text": "The engineering handoff is planned for Thursday", "at": "engineering handoff for Thursday" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Maria Lopez", "text": "Update the designs and copy document with the three decisions", "at": "update the designs and the copy document" },
+      { "assignee": "Maria Lopez", "text": "Polish the small screen version of the pinned metrics row", "at": "quick pass on the small screen version" },
+      { "assignee": "Maria Lopez", "text": "Add empty and loading states for every widget type to the handoff file", "at": "add empty and loading states" },
+      { "assignee": "Maria Lopez", "text": "Send the invite for Thursday's engineering handoff", "at": "I'll send the invite", "completed": true },
+      { "assignee": "Sam Carter", "text": "Load sparklines lazily to protect first render performance", "at": "sparklines should load lazily" }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "title": "1:1 Check-in – Alex / Sam",
+  "days_ago": 34,
+  "hours_ago": 5,
+  "host": "alex.morgan@acme.example",
+  "source": "mobile",
+  "participants": ["sam.carter@acme.example"],
+  "transcript": [
+    "Alex Morgan: Hey Sam, thanks for making time for our one on one. How are things going this week?",
+    "Sam Carter: Pretty good overall. It's been a busy week with the Slack alerts work, but I feel like we're finally making real progress.",
+    "Alex Morgan: That's great to hear. How are you feeling about your workload in general?",
+    "Sam Carter: Honestly, it's been a bit heavy. Between alerts, on call and helping with interviews, I haven't had much focus time. I've been working late a few evenings to keep up.",
+    "Alex Morgan: Thanks for being honest about that. Working late shouldn't become the norm. What could we take off your plate?",
+    "Sam Carter: The interviews are probably the easiest thing to reduce. I've been doing three or four a week. I enjoy them, but one or two would be more sustainable.",
+    "Alex Morgan: That's very doable. I'll talk to Daniel about spreading interviews across more of the team.",
+    "Sam Carter: Thank you, that would really help.",
+    "Alex Morgan: Last time we talked about your career goals. Have you thought more about the tech lead path?",
+    "Sam Carter: I have. I'm definitely interested. I enjoy the technical side, but I've realized I also like helping others get unblocked and shaping how we build things. I'm less sure about the people management part.",
+    "Alex Morgan: That's a really common feeling, and the tech lead role here doesn't require managing people. It's about technical direction, mentoring and coordination. Daniel stays the people manager.",
+    "Sam Carter: That sounds like a much better fit for me.",
+    "Alex Morgan: Good. One concrete step could be leading the technical design for audit logs, which enterprise customers keep asking about. You'd write the design document and run the review.",
+    "Sam Carter: I'd love that. I've never run a formal design review, so it would be a good stretch.",
+    "Alex Morgan: Great, I'll suggest it to Daniel. Another idea is mentoring. Lena joined three months ago and could really use a technical mentor.",
+    "Sam Carter: Happy to mentor Lena. We already pair sometimes, so it would be a natural extension.",
+    "Alex Morgan: Perfect. Let's set up a regular pairing session for the two of you, maybe once a week.",
+    "Sam Carter: Sounds good. I also wanted to ask about conferences. There's a frontend conference in Berlin in the spring, and I'd like to submit a talk about our dashboard performance work.",
+    "Alex Morgan: That's a fantastic idea. Speaking at conferences is great for your growth and for our hiring brand. When is the submission deadline?",
+    "Sam Carter: End of next month. I'd need some time to prepare the proposal.",
+    "Alex Morgan: Take a few hours of work time for it, and I'm happy to review your abstract. The company will cover travel if the talk is accepted.",
+    "Sam Carter: That's awesome, thank you.",
+    "Alex Morgan: How has on call been lately? I know the August incident was stressful.",
+    "Sam Carter: It was. The incident itself was fine, but the runbooks were out of date, so it took longer than it should have. Since then we've updated most of them, so I feel better about it now.",
+    "Alex Morgan: Good to hear. If anything feels unsafe about on call, please tell me or Daniel right away.",
+    "Sam Carter: Will do. I also have a vacation question. I'd like to take the last two weeks of December off.",
+    "Alex Morgan: That should be fine, just add it to the team calendar so Daniel can plan the on call rotation around it.",
+    "Sam Carter: Great, I'll add it today.",
+    "Alex Morgan: Before we wrap up, is there any feedback you have for me?",
+    "Sam Carter: One small thing. Sometimes priorities change mid sprint without much explanation. I understand why it happens, but more context would help the team feel less whiplash.",
+    "Alex Morgan: That's really fair feedback, thank you. I'll make sure to explain the reasoning in the team channel whenever priorities shift.",
+    "Sam Carter: Thanks, I appreciate that.",
+    "Alex Morgan: Thanks Sam, this was a great conversation. Let's catch up again in two weeks."
+  ],
+  "summary": {
+    "gist": "Sam and Alex discussed workload, a tech lead growth path, mentoring, a conference talk and clearer communication of priority changes.",
+    "overview": "In their one-on-one, Sam shared that workload has been heavy because of Slack alerts, on-call and three to four interviews a week; interviews will be spread across the team. Sam is interested in the tech lead path, which at Acme focuses on technical direction and mentoring rather than people management. As next steps, Sam may lead the audit logs design, will mentor Lena weekly and will submit a conference talk on dashboard performance. Runbooks have improved since the August incident, and Sam's December vacation was approved. Sam asked for more context when priorities change mid-sprint.",
+    "keywords": ["One-on-one", "Workload", "Tech lead", "Career growth", "Mentoring", "Conference talk", "On call", "Feedback"],
+    "chapters": [
+      {
+        "title": "Workload",
+        "at": "How are you feeling about your workload",
+        "intro": "Sam's workload needs rebalancing.",
+        "points": [
+          { "text": "Sam's workload is heavy due to alerts, on call and three to four interviews a week, leading to late evenings", "at": "it's been a bit heavy" },
+          { "text": "Interviews will be reduced to one or two a week by spreading them across the team", "at": "talk to Daniel about spreading interviews" }
+        ]
+      },
+      {
+        "title": "Career Growth",
+        "at": "Have you thought more about the tech lead path",
+        "intro": "Sam is interested in growing toward a tech lead role.",
+        "points": [
+          { "text": "The tech lead path focuses on technical direction and mentoring rather than people management", "at": "the tech lead role here doesn't require managing people" },
+          { "text": "Sam could lead the technical design for audit logs as a stretch opportunity", "at": "leading the technical design for audit logs" },
+          { "text": "Sam will mentor Lena through weekly pairing sessions", "at": "Happy to mentor Lena" },
+          { "text": "Sam will submit a conference talk on dashboard performance, with work time and travel support", "at": "submit a talk about our dashboard performance" }
+        ]
+      },
+      {
+        "title": "On Call and Time Off",
+        "at": "How has on call been lately",
+        "intro": "On call has improved since the August incident.",
+        "points": [
+          { "text": "Outdated runbooks slowed the August incident response, but most have since been updated", "at": "the runbooks were out of date" },
+          { "text": "Sam's vacation for the last two weeks of December was approved", "at": "last two weeks of December" }
+        ]
+      },
+      {
+        "title": "Feedback for Alex",
+        "at": "is there any feedback you have for me",
+        "intro": "Sam shared feedback on how priority changes are communicated.",
+        "points": [
+          { "text": "Sam asked for more context when priorities change mid sprint, and Alex will explain the reasoning in the team channel", "at": "priorities change mid sprint" }
+        ]
+      }
+    ],
+    "action_items": [
+      { "assignee": "Alex Morgan", "text": "Ask Daniel to spread interviews across more of the team", "at": "talk to Daniel about spreading interviews", "completed": true },
+      { "assignee": "Alex Morgan", "text": "Suggest Sam as the design lead for audit logs", "at": "I'll suggest it to Daniel" },
+      { "assignee": "Sam Carter", "text": "Set up weekly pairing sessions with Lena", "at": "regular pairing session", "completed": true },
+      { "assignee": "Sam Carter", "text": "Draft a conference talk proposal on dashboard performance", "at": "prepare the proposal" },
+      { "assignee": "Alex Morgan", "text": "Review Sam's conference talk abstract", "at": "happy to review your abstract" },
+      { "assignee": "Sam Carter", "text": "Add the December vacation to the team calendar", "at": "I'll add it today", "completed": true },
+      { "assignee": "Alex Morgan", "text": "Explain the reasoning behind priority changes in the team channel", "at": "explain the reasoning in the team channel" }
+    ]
+  }
+}

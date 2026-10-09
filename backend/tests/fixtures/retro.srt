@@ -1,0 +1,19 @@
+1
+00:00:00,500 --> 00:00:05,000
+Ivy Chen: Welcome to the sprint retro. Let's start with what went well.
+
+2
+00:00:05,400 --> 00:00:11,000
+Ben Ortiz: The release went out on time and we had zero rollbacks. That was a first for us.
+
+3
+00:00:11,500 --> 00:00:17,800
+Ivy Chen: Agreed, great work. What didn't go well?
+
+4
+00:00:18,200 --> 00:00:25,000
+Ben Ortiz: Code reviews were slow. Some pull requests waited three days for a review.
+
+5
+00:00:25,500 --> 00:00:31,000
+Ivy Chen: Let's try a review rotation next sprint. I'll set up the schedule tomorrow.
