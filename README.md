@@ -5,8 +5,8 @@ the Fireflies workspace — the meetings library, the meeting "notepad" with an 
 synced to a media player, AI notes (keywords, overview, chapters, action items), Smart Search,
 AskFred, global search and tasks — on top of a FastAPI + SQLite backend.
 
-- **Live demo:** `<demo-url>`
-- **Repository:** `https://github.com/<your-github-username>/<repo-name>`
+- **Live demo:** https://fireflies-clone-alpha.vercel.app
+- **Repository:** https://github.com/Tashu020/Fireflies-Clone
 
 > Real speech-to-text and live meeting bots are out of scope (per the brief). Meetings come from
 > seeded data or from transcripts you upload / paste (`.txt`, `.vtt`, `.srt`, `.json`). Notes and
